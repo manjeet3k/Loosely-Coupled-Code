@@ -1,5 +1,6 @@
 package com.manjeet.LooselyCoupled.services.messageEngine;
 
+import com.manjeet.LooselyCoupled.services.FacebookMessageService;
 import com.manjeet.LooselyCoupled.services.MessageService;
 import com.manjeet.LooselyCoupled.services.TextMessageService;
 import com.manjeet.LooselyCoupled.services.WhatsAppMessageService;
@@ -11,6 +12,9 @@ public class MessageServiceFactory {
             return new TextMessageService();
         else if(serviceType.equals("whatsApp")) {
             return new WhatsAppMessageService();
+        }
+        else if(serviceType.equals("FacebookMessage")) {
+            return new FacebookMessageService();
         }
         else {
             throw new RuntimeException("no such service type exists");
