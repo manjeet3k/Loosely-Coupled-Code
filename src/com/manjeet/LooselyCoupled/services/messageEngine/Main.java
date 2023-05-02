@@ -11,5 +11,8 @@ public class Main {
         messageService = messageServiceFactory.getmessageService("whatsApp");
         messageService.sendMessage("Hello Students");
 
+        messageService = messageServiceFactory.getmessageService("FacebookMessage");
+        messageService.sendMessage("Hello folks");
+
     }
 }
